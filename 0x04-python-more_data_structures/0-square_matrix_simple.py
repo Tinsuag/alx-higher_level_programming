@@ -1,4 +1,8 @@
 #!/usr/bin/python3
-def squate_matrix_simple(matrix):
-    new_matrix = list(map((lambda x: x ** 2), matrix))
-    return new_matrix
+def square_matrix_simple(matrix=[]):
+    def square_cells(array):
+        result = []
+        for cell in array:
+            result.append(cell ** 2)
+        return result
+    return list(map(square_cells, matrix))
