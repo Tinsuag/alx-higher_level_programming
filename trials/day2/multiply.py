@@ -1,10 +1,13 @@
-#!/usr/bon/pyhton3
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
-
-new_matrix = square_matrix_simple(matrix)
-print(new_matrix)
-print(matrix)
+#!/usr/bon/python3
+numpad= [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9],
+    ]
+for row in numpad:
+    for num in row:
+        print(num, end=" ")
+    print()
+for row in numpad:
+    for num in row:
+        new = new.append(map(num*num, numpad))
