@@ -6,7 +6,7 @@ struct node{
     struct node *link;
 };
 
-struct node* insert_data_index(struct node *head, int input_data)
+struct node* insert_data_beg(struct node *head, int input_data)
 {
     struct  node *temp;
 
@@ -81,7 +81,7 @@ int main(){
     //print_linked_list(head);
 
     insert_data(head, 76);
-    head = insert_data_index(head, 32);
+    head = insert_data_beg(head, 32);
 
     //count_of_nodes(head);
     print_linked_list(head);
