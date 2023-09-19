@@ -6,6 +6,33 @@ struct node{
     struct node *link;
 };
 
+struct node* insert_data_index(struct node *head, int input_data)
+{
+    struct  node *temp;
+
+    temp = (struct node *)malloc(sizeof(struct node));
+    temp -> data = input_data;
+    temp -> link = NULL;
+    temp -> link = head;
+    head = temp;
+    return head;
+
+}
+void insert_data(struct node *head, int input_data)
+{
+    struct node *ptr, *temp;
+    ptr = head;
+    temp = (struct node *)malloc(sizeof(struct node));
+
+    while(ptr -> link != NULL)
+    {
+        ptr = ptr -> link;
+    }
+    
+    temp -> data = input_data;
+    temp -> link = NULL;
+    ptr -> link = temp;
+}
 void count_of_nodes(struct node *head)
 {
     int count = 0;
@@ -50,8 +77,18 @@ int main(){
     head -> link -> link = current;
     
 
-    count_of_nodes(head);
+    //count_of_nodes(head);
+    //print_linked_list(head);
+
+    insert_data(head, 76);
+    head = insert_data_index(head, 32);
+
+    //count_of_nodes(head);
     print_linked_list(head);
+
+    free(head);
+
+
 
     return 0;
 }
