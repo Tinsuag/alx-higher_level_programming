@@ -5,21 +5,6 @@ struct node{
     int data;
     struct node *link;
 };
-struct node* remove_at(struct node *head, int index)
-{
-    index --;
-    struct node *temp;
-
-    temp = head;
-    while(index != 1)
-    {
-        temp = temp -> link;
-        index--;
-    }
-    temp-> link = temp
-
-    return head;
-}
 struct node* insert_data_index(struct node *head, int input_data, int index)
 {
     struct node *temp, *ptr;
