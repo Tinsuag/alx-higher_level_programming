@@ -1,8 +1,11 @@
 #!/usr/python3
-def safe_print_list(mylist[], i):
-    for element in mylist:
-        if (element > i):
+def safe_print_list(my_list=[], x=0):
+    a = 0
+    for i in range(x):
+        try:
+            print(my_list[i], end='')
+            a = a + 1
+        except Exception:
             break
-        a = (mylist[element]) + (10 ** element)
-        element += 1
-    return (a)
+    print('')
+    return a
